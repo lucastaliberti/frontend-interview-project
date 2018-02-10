@@ -85,7 +85,7 @@ const OFFICE_HOURS = {
 
   tuesday: {
     startTime: date(2018, 1, 1, 13, 30), // 1:30pm,
-    endTime: date(2018, 1, 1, 18, 50), // 6:30pm,
+    endTime: date(2018, 1, 1, 18, 30), // 6:30pm,
     breaks: []
   },
 
