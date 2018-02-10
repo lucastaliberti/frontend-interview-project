@@ -137,7 +137,7 @@ describe("#getAvailabilities", () => {
   });
 
   it("consider breaks", () => {
-    expect(getAvailabilities(OFFICE_HOURS["monday"], {})).toEqual([
+    expect(getAvailabilities(OFFICE_HOURS["monday"], [])).toEqual([
       {
         startTime: "2018-02-01T08:00:00.000Z",
         endTime: "2018-02-01T12:00:00.000Z"
