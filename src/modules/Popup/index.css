@@ -1,0 +1,41 @@
+.popup-laucher {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09), 0 4px 40px rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ff715a;
+  cursor: pointer;
+}
+
+.popup-laucher_wrapper > i {
+  position: absolute;
+  font-size: 1.7em;
+  line-height: 1em;
+  top: 16px;
+  left: 18px;
+  color: white;
+  transition: transform 0.16s linear, opacity 0.08s linear;
+}
+
+.popup-laucher_open {
+  opacity: 1;
+}
+
+.popup-laucher_active > .popup-laucher_open {
+  opacity: 0;
+  transform: rotate(30deg) scale(0);
+}
+
+.popup-laucher_close {
+  opacity: 0;
+  top: 17px;
+  left: 20px;
+}
+
+.popup-laucher_active > .popup-laucher_close {
+  opacity: 1;
+  transform: rotate(45deg);
+}

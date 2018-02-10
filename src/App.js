@@ -1,7 +1,8 @@
+import React, { Component } from "react";
+import logo from "./logo.png";
+import "./App.css";
 
-import React, { Component } from 'react';
-import logo from './logo.png';
-import './App.css';
+import Popup from "./modules/Popup";
 
 class App extends Component {
   render() {
@@ -12,8 +13,10 @@ class App extends Component {
           <h1 className="App-title">Welcome to CareCru</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and any of its imported files and save to reload.
+          To get started, edit <code>src/App.js</code> and any of its imported
+          files and save to reload.
         </p>
+        <Popup />
       </div>
     );
   }
