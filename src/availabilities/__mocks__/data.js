@@ -1,6 +1,7 @@
 const date = (y, m, d, h, mi) =>
   new Date(Date.UTC(y, m, d, h, mi)).toISOString();
 
+// Fake Appointments Database
 export const APPOINTMENTS = {
   sunday: [],
   monday: [
@@ -110,7 +111,7 @@ export const OFFICE_HOURS = {
   },
 
   friday: {
-    startTime: date(2018, 1, 1, 8, 30), // 8:00am,
+    startTime: date(2018, 1, 1, 8, 30), // 8:30am,
     endTime: date(2018, 1, 1, 13, 30), // 1:30pm,
     breaks: []
   },
