@@ -1,9 +1,11 @@
 import moment from "moment";
 import clone from "lodash/clone";
 
+// ISO String helper
 const date = (y, m, d, h, mi) =>
   new Date(Date.UTC(y, m, d, h, mi)).toISOString();
 
+// Emulate API request delay
 export function pause(ms = 1000) {
   return new Promise(resolve => {
     setTimeout(() => {
@@ -79,6 +81,12 @@ const APPOINTMENTS = {
   saturday: []
 };
 
+/**
+ * fetchAppointments is a mock function to emulate fetching appointments from the CareCru API for a supplied date
+ *
+ * @param date
+ * @returns {Promise.<*>}
+ */
 export async function fetchAppointments(date) {
   try {
     // Emulate an API request
@@ -136,7 +144,7 @@ const OFFICE_HOURS = {
   },
 
   friday: {
-    startTime: date(2018, 1, 1, 8, 30), // 8:00am,
+    startTime: date(2018, 1, 1, 8, 30), // 8:30am,
     endTime: date(2018, 1, 1, 13, 30), // 1:30pm,
     breaks: []
   },
@@ -144,6 +152,12 @@ const OFFICE_HOURS = {
   saturday: { isClosed: true }
 };
 
+/**
+ * fetchOfficeHours is a mock function to emulate fetching officeHours from the CareCru API for a supplied date
+ *
+ * @param date
+ * @returns {Promise.<*>}
+ */
 export async function fetchOfficeHours(date) {
   try {
     // Emulate an API request
