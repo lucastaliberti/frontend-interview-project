@@ -6,7 +6,7 @@ import moment from "moment";
  * @returns {[availabilities]}
  */
 export default function getAvailabilities(officeHours, appointments) {
-  if (officeHours.isClosed) return [];
+  if (!officeHours.startTime || officeHours.isClosed) return [];
   else {
     const notAvailableTimes = appointments
       .concat(officeHours.breaks)

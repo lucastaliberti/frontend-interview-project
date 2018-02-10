@@ -104,4 +104,8 @@ describe("#getAvailabilities", () => {
       getAvailabilities(OFFICE_HOURS[testingDay], APPOINTMENTS[testingDay])
     ).toEqual([]);
   });
+
+  it("returns and empty array on an empty input", () => {
+    expect(getAvailabilities({}, [])).toEqual([]);
+  });
 });
