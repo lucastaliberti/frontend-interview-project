@@ -5,3 +5,13 @@
 .DayPicker {
   font-size: 0.8em;
 }
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: #206477;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: #ff715a;
+}
+.DayPicker-Day--today {
+  color: #ff715a;
+}
