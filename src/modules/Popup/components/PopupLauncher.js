@@ -1,6 +1,8 @@
 import React from "react";
 import FontAwesome from "react-fontawesome";
 
+import "./PopupLauncher.css";
+
 const PopupLauncher = ({ isOpen, toggleOpen }) => (
   <div className="popup-launcher" onClick={toggleOpen}>
     <div

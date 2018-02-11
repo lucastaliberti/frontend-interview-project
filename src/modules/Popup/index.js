@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import PopupLauncher from "./components/PopupLauncher";
-import "./index.css";
+import PopupWindow from "./components/PopupWindow";
 
 class Popup extends Component {
   constructor() {
