@@ -1,0 +1,43 @@
+.popup-window {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  background: white;
+}
+@media only screen and (max-width: 450px) {
+  .popup-window {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+@media only screen and (min-width: 451px) {
+  .popup-window {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09), 0 4px 40px rgba(0, 0, 0, 0.24);
+    bottom: 100px;
+    right: 20px;
+    width: 370px;
+    min-height: 250px;
+    max-height: 590px;
+    border-radius: 6px;
+  }
+}
+
+.popup-window_intro {
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 13px;
+  width: 240px;
+  text-align: center;
+  margin: 0 auto 15px;
+  line-height: 1.4;
+}
+
+.popup-window_body {
+  flex: 1 1 auto;
+  margin: 16px 20px 0px;
+}
