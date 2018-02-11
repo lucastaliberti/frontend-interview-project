@@ -4,9 +4,9 @@ import "react-day-picker/lib/style.css";
 
 import "./Calendar.css";
 
-const Calendar = () => (
+const Calendar = ({ selectedDay, handleDayClick }) => (
   <div className="popup-window_calendar">
-    <DayPicker />
+    <DayPicker selectedDays={selectedDay} onDayClick={handleDayClick} />
   </div>
 );
 

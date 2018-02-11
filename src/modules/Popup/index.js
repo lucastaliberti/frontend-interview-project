@@ -9,14 +9,22 @@ class Popup extends Component {
     super();
 
     this.state = {
-      isOpen: false
+      isOpen: false,
+      items: [],
+      selectedDay: new Date()
     };
   }
+
+  handleDayClick = (day, { selected }) => {
+    this.setState({
+      selectedDay: selected ? undefined : day
+    });
+  };
 
   toggleOpen = e => this.setState({ isOpen: !this.state.isOpen });
 
   render() {
-    const { isOpen } = this.state;
+    const { isOpen, items, selectedDay } = this.state;
     return (
       <div>
         <PopupLauncher isOpen={isOpen} toggleOpen={this.toggleOpen} />
@@ -26,7 +34,14 @@ class Popup extends Component {
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}
         >
-          {isOpen && <PopupWindow toggleOpen={this.toggleOpen} />}
+          {isOpen && (
+            <PopupWindow
+              toggleOpen={this.toggleOpen}
+              items={items}
+              selectedDay={selectedDay}
+              handleDayClick={this.handleDayClick}
+            />
+          )}
         </ReactCSSTransitionGroup>
       </div>
     );
