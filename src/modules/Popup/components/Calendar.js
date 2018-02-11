@@ -3,12 +3,14 @@ import { StyleSheet, css } from "aphrodite";
 import DayPicker from "react-day-picker";
 import "react-day-picker/lib/style.css";
 
+import theme from "../theme";
+
 const modifiersStyles = {
   selected: {
-    backgroundColor: "#206477"
+    backgroundColor: theme.highlight
   },
   today: {
-    color: "#ff715a"
+    color: theme.primary
   }
 };
 

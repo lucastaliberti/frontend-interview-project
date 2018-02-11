@@ -3,6 +3,8 @@ import { StyleSheet, css } from "aphrodite";
 
 import FontAwesome from "react-fontawesome";
 
+import theme from "../theme";
+
 const PopupLauncher = ({ isOpen, toggleOpen }) => (
   <div className={css(styles.popup_launcher)} onClick={toggleOpen}>
     <FontAwesome
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
     width: "60px",
     height: "60px",
     borderRadius: "50%",
-    background: "#ff715a",
+    background: theme.primary,
     cursor: "pointer"
   },
   popup_icon: {
