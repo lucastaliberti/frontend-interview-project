@@ -10,8 +10,18 @@ const PopupLauncher = ({ isOpen, toggleOpen }) => (
         isOpen ? "popup-launcher_active" : ""
       }`}
     >
-      <FontAwesome name="calendar" tag="i" className="popup-launcher_open" />
-      <FontAwesome name="plus" tag="i" className="popup-launcher_close" />
+      <FontAwesome
+        name="calendar"
+        tag="i"
+        size="2x"
+        className="popup-launcher_open"
+      />
+      <FontAwesome
+        name="plus"
+        tag="i"
+        size="2x"
+        className="popup-launcher_close"
+      />
     </div>
   </div>
 );
