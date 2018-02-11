@@ -43,7 +43,7 @@ const officeHoursBreaksReducer = officeHours => (acc, breaks, index, arr) => {
     .toISOString();
 
   if (
-    index == arr.length - 1 &&
+    index === arr.length - 1 &&
     moment.utc(officeHours.endTime).diff(moment.utc(acc.nextStartTime), "m") > 0
   )
     acc.hours.push({
