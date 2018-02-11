@@ -3,9 +3,9 @@ import FontAwesome from "react-fontawesome";
 
 import "./PopupWindowHead.css";
 
-const PopupWindowHead = () => (
+const PopupWindowHead = ({ toggleOpen }) => (
   <div className="popup-window_head">
-    <div className="popup-window_close-button">
+    <div className="popup-window_close-button" onClick={toggleOpen}>
       <FontAwesome name="plus" size="2x" tag="i" />
     </div>
     <div className="popup-window_title">Daily Availabilities</div>

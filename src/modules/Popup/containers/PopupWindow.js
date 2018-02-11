@@ -6,9 +6,9 @@ import TimeSlotCard from "../components/TimeSlotCard";
 
 import "./PopupWindow.css";
 
-const PopupWindow = () => (
-  <div className="popup-window">
-    <PopupWindowHead />
+const PopupWindow = ({ toggleOpen }) => (
+  <div className={`popup-window`}>
+    <PopupWindowHead toggleOpen={toggleOpen} />
     <Calendar />
     <div className="popup-window_body">
       <TimeSlotCard startTime="8:30" endTime="9:30" />

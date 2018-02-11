@@ -1,9 +1,34 @@
+.popup-window_transition-enter {
+  opacity: 0.01;
+  transform: translate(0, 20px);
+}
+
+.popup-window_transition-enter.popup-window_transition-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: transform 0.16s linear, opacity 0.08s linear;
+}
+
+.popup-window_transition-leave {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.popup-window_transition-leave.popup-window_transition-leave-active {
+  opacity: 0.01;
+  transform: translate(0, 20px);
+  transition: transform 0.16s linear, opacity 0.08s linear;
+}
+
 .popup-window {
   position: absolute;
   display: flex;
   flex-flow: column;
   background: white;
+  transform-origin: bottom;
+  transition: transform 0.16s linear, opacity 0.08s linear;
 }
+
 @media only screen and (max-width: 450px) {
   .popup-window {
     width: 100%;
@@ -18,12 +43,12 @@
 }
 @media only screen and (min-width: 451px) {
   .popup-window {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09), 0 4px 40px rgba(0, 0, 0, 0.24);
     bottom: 100px;
     right: 20px;
     width: 370px;
     min-height: 250px;
     max-height: 590px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09), 0 4px 40px rgba(0, 0, 0, 0.24);
     border-radius: 6px;
   }
 }
