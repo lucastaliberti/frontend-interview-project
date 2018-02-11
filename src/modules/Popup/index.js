@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import PopupLauncher from "./components/PopupLauncher";
-import PopupWindow from "./components/PopupWindow";
+import PopupWindow from "./containers/PopupWindow";
 
 class Popup extends Component {
   constructor() {
@@ -16,7 +16,12 @@ class Popup extends Component {
 
   render() {
     const { isOpen } = this.state;
-    return <PopupLauncher isOpen={isOpen} toggleOpen={this.toggleOpen} />;
+    return (
+      <div>
+        <PopupWindow />
+        <PopupLauncher isOpen={isOpen} toggleOpen={this.toggleOpen} />
+      </div>
+    );
   }
 }
 
