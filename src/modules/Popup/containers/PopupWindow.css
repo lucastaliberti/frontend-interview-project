@@ -16,8 +16,7 @@
 
 .popup-window_transition-leave.popup-window_transition-leave-active {
   opacity: 0.01;
-  transform: translate(0, 20px);
-  transition: transform 0.16s linear, opacity 0.08s linear;
+  transition: opacity 0.08s linear;
 }
 
 .popup-window {
@@ -65,4 +64,5 @@
 .popup-window_body {
   flex: 1 1 auto;
   margin: 16px 20px 0px;
+  min-height: 250px;
 }
