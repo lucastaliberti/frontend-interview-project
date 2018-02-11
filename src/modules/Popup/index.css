@@ -1,4 +1,4 @@
-.popup-laucher {
+.popup-launcher {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09), 0 4px 40px rgba(0, 0, 0, 0.24);
   position: fixed;
   bottom: 20px;
@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 
-.popup-laucher_wrapper > i {
+.popup-launcher_wrapper > i {
   position: absolute;
   font-size: 1.7em;
   line-height: 1em;
@@ -20,22 +20,22 @@
   transition: transform 0.16s linear, opacity 0.08s linear;
 }
 
-.popup-laucher_open {
+.popup-launcher_open {
   opacity: 1;
 }
 
-.popup-laucher_active > .popup-laucher_open {
+.popup-launcher_active > .popup-launcher_open {
   opacity: 0;
   transform: rotate(30deg) scale(0);
 }
 
-.popup-laucher_close {
+.popup-launcher_close {
   opacity: 0;
   top: 17px;
   left: 20px;
 }
 
-.popup-laucher_active > .popup-laucher_close {
+.popup-launcher_active > .popup-launcher_close {
   opacity: 1;
   transform: rotate(45deg);
 }
