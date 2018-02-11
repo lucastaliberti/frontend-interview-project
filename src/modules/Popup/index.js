@@ -18,8 +18,8 @@ class Popup extends Component {
     const { isOpen } = this.state;
     return (
       <div>
-        <PopupWindow />
         <PopupLauncher isOpen={isOpen} toggleOpen={this.toggleOpen} />
+        <PopupWindow />
       </div>
     );
   }
