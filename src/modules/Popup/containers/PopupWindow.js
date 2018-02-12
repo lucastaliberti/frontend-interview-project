@@ -9,11 +9,29 @@ import theme from "../theme";
 
 const PopupWindow = ({ toggleOpen, items, selectedDay, handleDayClick }) => (
   <div className={css(styles.popup_window)}>
-    <PopupWindowHead toggleOpen={toggleOpen} />
-    <Calendar selectedDay={selectedDay} handleDayClick={handleDayClick} />
+    <ReactCSSTransitionGroup
+      transitionName="popup_window_head"
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnter={false}
+      transitionLeave={false}
+    >
+      <PopupWindowHead toggleOpen={toggleOpen} />
+    </ReactCSSTransitionGroup>
+    <ReactCSSTransitionGroup
+      transitionName="popup_window_calendar"
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnter={false}
+      transitionLeave={false}
+    >
+      <Calendar selectedDay={selectedDay} handleDayClick={handleDayClick} />
+    </ReactCSSTransitionGroup>
     <div className={css(styles.popup_window_body)}>
       <ReactCSSTransitionGroup
-        transitionName="popup-window_card_transition"
+        transitionName="popup_window_card"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
         transitionEnterTimeout={500}
         transitionLeaveTimeout={300}
       >

@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   popup_window_head: {
     flex: " 0 0 auto",
     background: theme.primary,
-    paddingTop: "18px",
+    padding: "18px 0px",
     boxShadow: theme.sectionShadow,
     "@media only screen and (max-width: 450px)": {
       borderRadius: 0
@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
   popup_window_title_line: {
     height: "1px",
     border: 0,
-    background: "black",
     width: "80%",
     background:
       "radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))"
@@ -69,7 +68,7 @@ const styles = StyleSheet.create({
     fontSize: "13px",
     width: "240px",
     textAlign: "center",
-    margin: "0 auto 15px",
+    margin: "0 auto",
     lineHeight: 1.4
   }
 });

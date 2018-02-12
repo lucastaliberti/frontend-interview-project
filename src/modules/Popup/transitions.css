@@ -1,40 +1,62 @@
-.popup-window_transition-enter {
+.popup_window-enter {
   opacity: 0.01;
   transform: translate(0, 20px);
 }
 
-.popup-window_transition-enter.popup-window_transition-enter-active {
+.popup_window-enter.popup_window-enter-active {
   opacity: 1;
   transform: translate(0, 0);
   transition: transform 0.16s linear, opacity 0.08s linear;
 }
 
-.popup-window_transition-leave {
+.popup_window-leave {
   opacity: 1;
   transform: translate(0, 0);
 }
 
-.popup-window_transition-leave.popup-window_transition-leave-active {
+.popup_window-leave.popup_window-leave-active {
   opacity: 0.01;
   transition: opacity 0.08s linear;
 }
 
-.popup-window_card_transition-enter {
+.popup_window_head-appear,
+.popup_window_calendar-appear {
+  opacity: 0.01;
+  transform: scaleY(0);
+}
+
+.popup_window_head-appear.popup_window_head-appear-active,
+.popup_window_calendar-appear.popup_window_calendar-appear-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transform-origin: top;
+}
+.popup_window_head-appear.popup_window_head-appear-active {
+  transition: transform 0.16s linear, opacity 0.16s linear;
+}
+
+.popup_window_calendar-appear.popup_window_calendar-appear-active {
+  transition: transform 0.16s linear 0.16s, opacity 0.08s linear 0.08s;
+}
+
+.popup_window_card-enter,
+.popup_window_card-appear {
   opacity: 0.01;
   transform: translate(-20px, 0);
 }
 
-.popup-window_card_transition-enter.popup-window_card_transition-enter-active {
+.popup_window_card-enter.popup_window_card-enter-active,
+.popup_window_card-enter.popup_window_card-appear-active {
   opacity: 1;
   transform: translate(0, 0);
   transition: transform 0.16s linear, opacity 0.08s linear;
 }
 
-.popup-window_card_transition-leave {
+.popup_window_card-leave {
   opacity: 1;
 }
 
-.popup-window_card_transition-leave.popup-window_card_transition-leave-active {
+.popup_window_card-leave.popup_window_card-leave-active {
   opacity: 0.01;
   transition: opacity 0.08s linear;
 }

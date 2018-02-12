@@ -103,7 +103,7 @@ class Popup extends Component {
         <PopupLauncher isOpen={isOpen} toggleOpen={this.toggleOpen} />
 
         <ReactCSSTransitionGroup
-          transitionName="popup-window_transition"
+          transitionName="popup_window"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}
         >
