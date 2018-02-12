@@ -33,7 +33,7 @@ const PopupWindow = ({ toggleOpen, items, selectedDay, handleDayClick }) => (
         transitionAppear={true}
         transitionAppearTimeout={500}
         transitionEnterTimeout={500}
-        transitionLeaveTimeout={300}
+        transitionLeave={false}
       >
         {items}
       </ReactCSSTransitionGroup>
