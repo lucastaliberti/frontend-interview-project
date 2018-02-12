@@ -1,10 +1,20 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { StyleSheetTestUtils } from "aphrodite";
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+describe("App Component", () => {
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
+
+  it("renders without crashing", () => {
+    const div = document.createElement("div");
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
 });
