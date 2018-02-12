@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 import Popup from "../index";
 
 import PopupLauncher from "../components/PopupLauncher";
-import PopupWindow from "../containers/PopupWindow";
+import PopupWindow from "../components/PopupWindow";
 
 Enzyme.configure({ adapter: new Adapter() });
 

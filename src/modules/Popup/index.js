@@ -3,7 +3,7 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import moment from "moment";
 
 import PopupLauncher from "./components/PopupLauncher";
-import PopupWindow from "./containers/PopupWindow";
+import PopupWindow from "./components/PopupWindow";
 import TimeSlotCard from "./components/TimeSlotCard";
 import NotAvailableCard from "./components/NotAvailableCard";
 import LoadingData from "./components/LoadingData";

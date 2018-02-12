@@ -2,8 +2,8 @@ import React from "react";
 import { StyleSheet, css } from "aphrodite";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
-import PopupWindowHead from "../components/PopupWindowHead";
-import Calendar from "../components/Calendar";
+import PopupWindowHead from "./PopupWindowHead";
+import Calendar from "./Calendar";
 
 import theme from "../theme";
 
