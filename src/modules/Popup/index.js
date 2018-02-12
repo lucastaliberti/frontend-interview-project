@@ -11,6 +11,8 @@ import LoadingData from "./components/LoadingData";
 import { fetchOfficeHours, fetchAppointments } from "../../fetch";
 import getAvailabilities from "../../availabilities/getAvailabilities";
 
+import "./transitions.css";
+
 class Popup extends Component {
   constructor() {
     super();

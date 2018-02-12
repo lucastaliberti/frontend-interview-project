@@ -32,7 +32,7 @@ const PopupLauncher = ({ isOpen, toggleOpen }) => (
 
 const styles = StyleSheet.create({
   popup_launcher: {
-    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.09), 0 4px 40px rgba(0, 0, 0, 0.24)",
+    boxShadow: theme.bgShadow,
     position: "fixed",
     bottom: "20px",
     right: "20px",
